@@ -6,29 +6,29 @@
 }
 
 .main{
-  height: 100vh; /*vh - viewport height*/
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 100px 1fr 100px;
 }
 
 .header, .footer{
-  height: 100px;
   background-color: blue;
-  color: white;
 }
 
-.wrapper{
-  display: flex;
-  height: 100%;
-}
-
-.navbar, .sidebar{
-  width: 200px;
+.sidebar, .navbar{
   background-color: deepskyblue;
-  color: white;
 }
 
 .content{
-  flex-grow: 1;
   background-color: gray;
+}
+
+.header{
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+.footer{
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
 }
